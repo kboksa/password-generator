@@ -58,16 +58,18 @@ function generatePassword() {
     );
   }
 
-  var password = [];
+  var finalPassword = [];
 
   for (var i = 0; i < numberCharacters; i++) {
-    password += passwordArray[Math.floor(Math.random() * passwordArray.length)];
+    finalPassword.push(
+      passwordArray[Math.floor(Math.random() * passwordArray.length)]
+    );
   }
-  for (var i = 0; i < password.length; i++) {
-    password[i] = password[i];
-    console.log(password[i]);
+  for (var i = 0; i < guaranteedCharacters.length; i++) {
+    finalPassword[i] = guaranteedCharacters[i];
+    console.log(typeof finalPassword, guaranteedCharacters[i]);
   }
-  return password;
+  return finalPassword.join("");
 }
 
 // Write password to the #password input
