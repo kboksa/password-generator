@@ -69,6 +69,9 @@ function generatePassword() {
     finalPassword[i] = guaranteedCharacters[i];
     console.log(typeof finalPassword, guaranteedCharacters[i]);
   }
+  // if (numberCharacters <8 || >128){
+  //   alert("It is recommended to have a password between 8 and 128 characters long.")
+  // }
   return finalPassword.join("");
 }
 
