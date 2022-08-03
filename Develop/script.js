@@ -14,6 +14,12 @@ var numberCharacters = prompt(
   "how many characters do you want? It must be between 8 and 128 characters."
 );
 
+while (numberCharacters < 8 || numberCharacters > 128) {
+  numberCharacters = prompt(
+    "Please enter a number in range 8-128.\nhow many characters do you want? It must be between 8 and 128 characters."
+  );
+}
+
 var confirmLowerCase = confirm(
   "Do you want lowercase letters in your password?"
 );
@@ -69,9 +75,7 @@ function generatePassword() {
     finalPassword[i] = guaranteedCharacters[i];
     console.log(typeof finalPassword, guaranteedCharacters[i]);
   }
-  // if (numberCharacters <8 || >128){
-  //   alert("It is recommended to have a password between 8 and 128 characters long.")
-  // }
+
   return finalPassword.join("");
 }
 
