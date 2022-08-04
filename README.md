@@ -2,6 +2,8 @@
 
 ## Deployed link to application
 
+https://kboksa.github.io/password-generator/
+
 ## Description
 
 - My motivation for this project was to create a password generator that uses 8-128 characters
